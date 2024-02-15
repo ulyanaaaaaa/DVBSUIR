@@ -7,6 +7,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rotate/Face.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rotate/Align.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Steering.cs" />
@@ -15,10 +19,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Evade.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Pursue.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Arrive.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AgentBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Agent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Chase/Arrive.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Chase/Leave.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AgentBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Agent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Rotate/Align.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Rotate/Face.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2cPb1ZEDAoiwIboGnG3o4Z35s02" />
@@ -42,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708015950278</updated>
       <workItem from="1708015961327" duration="10719000" />
+      <workItem from="1708035337751" duration="1595000" />
     </task>
     <servers />
   </component>

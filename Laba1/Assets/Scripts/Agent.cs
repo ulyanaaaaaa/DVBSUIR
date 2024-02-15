@@ -6,8 +6,10 @@ public class Agent : MonoBehaviour
     public Vector3 Velocity;
     public float MaxAccel;
     private Steering _steering;
-    private float _orientation;
-    private float _rotation;
+    public float Orientation;
+    public float Rotation;
+    public float MaxRotation;
+    public float MaxAngularAccel;
     
     
     private void Start()
@@ -19,34 +21,49 @@ public class Agent : MonoBehaviour
     public virtual void Update()
     {
         Vector3 diplacement = Velocity * Time.deltaTime; //смещение
-        _orientation += _rotation * Time.deltaTime; //поворот
+        Orientation += Rotation * Time.deltaTime; //поворот
 
-        if (_orientation < 0.0f)
-            _orientation += 360.0f;
+        if (Orientation < 0.0f)
+            Orientation += 360.0f;
         
-        else if (_orientation > 360.0f)
-            _orientation -= 360.0f;
+        else if (Orientation > 360.0f)
+            Orientation -= 360.0f;
         
         transform.Translate(diplacement, Space.World); //перемещение
         transform.rotation = new Quaternion(); //обнуление
-        transform.Rotate(Vector3.up, _orientation);
+        transform.Rotate(Vector3.up, Orientation);
     }
 
     public virtual void LateUpdate()
     {
         Velocity += (_steering.Linear * Time.deltaTime).normalized;
-        _rotation += _steering.Angular * Time.deltaTime;
+        Rotation += _steering.Angular * Time.deltaTime;
 
         if (Velocity.magnitude > MaxSpeed)
             Velocity *= MaxSpeed;
 
         if (_steering.Angular == 0.0f)
-            _rotation = 0.0f;
+            Rotation = 0.0f;
 
         if (_steering.Linear.sqrMagnitude == 0.0f)
             Velocity = Vector3.zero;
 
         _steering = new Steering();
+    }
+    
+    public float MapToRange(float rotation)
+    {
+        rotation %= 360.0f;
+
+        if (Mathf.Abs(rotation) > 180.0f)
+        {
+            if (rotation < 0.0f)
+                rotation += 360.0f;
+            else
+                rotation -= 360.0f;
+        }
+
+        return rotation;
     }
 
     public void SetSteering(Steering steering)
