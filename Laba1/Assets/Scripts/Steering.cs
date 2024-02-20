@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Steering
 {
-   public float Angular;
-   public Vector3 Linear;
+   public float Angular; //поворот
+   public Vector3 Linear; //перемещение
 
    public Steering()
    {

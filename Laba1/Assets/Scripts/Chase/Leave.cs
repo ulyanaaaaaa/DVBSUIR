@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Leave : AgentBehaviour
 {
-    public float EscapeRadius;
-    public float DangerRadius;
+    public float EscapeRadius; //радиус замедления
+    public float DangerRadius; //радиус опасности
     public float TimeToTarget = 0.1f;
     
     public override Steering GetSteering()

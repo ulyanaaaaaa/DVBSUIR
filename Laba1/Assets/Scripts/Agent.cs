@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Agent : MonoBehaviour
+public class Agent : MonoBehaviour //ответственный за реализацию моделей интеллектуального перемещения
 {
     public float MaxSpeed;
     public Vector3 Velocity;
@@ -10,8 +10,7 @@ public class Agent : MonoBehaviour
     public float Rotation;
     public float MaxRotation;
     public float MaxAngularAccel;
-    
-    
+
     private void Start()
     {
         Velocity = Vector3.zero;
@@ -23,7 +22,7 @@ public class Agent : MonoBehaviour
         Vector3 diplacement = Velocity * Time.deltaTime; //смещение
         Orientation += Rotation * Time.deltaTime; //поворот
 
-        if (Orientation < 0.0f)
+        if (Orientation < 0.0f)   //ограничение
             Orientation += 360.0f;
         
         else if (Orientation > 360.0f)
@@ -34,7 +33,7 @@ public class Agent : MonoBehaviour
         transform.Rotate(Vector3.up, Orientation);
     }
 
-    public virtual void LateUpdate()
+    public virtual void LateUpdate() //подготавливает значения для следующего кадра
     {
         Velocity += (_steering.Linear * Time.deltaTime).normalized;
         Rotation += _steering.Angular * Time.deltaTime;
@@ -51,7 +50,7 @@ public class Agent : MonoBehaviour
         _steering = new Steering();
     }
     
-    public float MapToRange(float rotation)
+    public float MapToRange(float rotation) //определяет направление вращения посредством вычисления разности двух направлений
     {
         rotation %= 360.0f;
 
