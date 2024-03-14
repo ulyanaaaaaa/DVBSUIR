@@ -22,8 +22,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AgentBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Steering.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Chase/Leave.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Agent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Rotate/Align.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Agent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Evasion/Flee.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Rotate/Face.cs" />
     </changedPaths>
   </component>
@@ -50,6 +51,8 @@
       <workItem from="1708015961327" duration="10719000" />
       <workItem from="1708035337751" duration="1595000" />
       <workItem from="1708427759467" duration="1566000" />
+      <workItem from="1708557088653" duration="781000" />
+      <workItem from="1708595699531" duration="1402000" />
     </task>
     <servers />
   </component>

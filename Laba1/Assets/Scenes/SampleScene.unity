@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e8f01a48596874ab6f0f4dad68f022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 0.5
+  MaxSpeed: 1
   Velocity: {x: 0, y: 0, z: 0}
   MaxAccel: 0.5
   Orientation: 0
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e8f01a48596874ab6f0f4dad68f022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 2
+  MaxSpeed: 10
   Velocity: {x: 0, y: 0, z: 0}
   MaxAccel: 2
   Orientation: 0

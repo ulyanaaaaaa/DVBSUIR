@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Face : Align
 {
-    // Дополнительная цель, используемая для вычисления ориентации 
+    // цель, используемая для вычисления ориентации 
     protected GameObject targetAux;
 
     public override void Awake()
     {
         base.Awake();
-        // Присваиваем целевой дополнительной переменной и создаем новый GameObject вместо оригинальной цели
+        // Присваиваем целевой переменной и создаем новый GameObject вместо оригинальной цели
         targetAux = Target;
         Target = new GameObject();
         Target.AddComponent<Agent>();
@@ -16,7 +16,7 @@ public class Face : Align
 
     public override Steering GetSteering()
     {
-        // Вычисляем направление к дополнительной цели
+        // Вычисляем направление к цели
         Vector3 direction = targetAux.transform.position - transform.position;
         // Если направление ненулевое, вычисляем угол ориентации и присваиваем его целевой цели
         if (direction.magnitude > 0.0f)
